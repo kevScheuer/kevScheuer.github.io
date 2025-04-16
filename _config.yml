@@ -32,6 +32,9 @@ external:                  # shows a footer with social links - for available ic
   - {title: Subscribe, icon: rss, url: "/feed.xml"}
   - {title: LinkedIn, icon: linkedin, url: "https://www.linkedin.com/in/kevin-scheuer/"}
 
+include:
+  - assets/css/custom.css
+  
 comments:
 #  disqus_shortname: ""    # see https://disqus.com/
 #  isso_domain: ""         # see https://posativ.org/isso/
