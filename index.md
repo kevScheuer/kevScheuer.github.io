@@ -1,5 +1,10 @@
 ---
-title: Welcome to my blog
+layout: default
+title: "Home"
 ---
 
-This is a test to ensure that the homepage of my new blog is working properly. Hello to those who have travelled this far back in the commit history!
+{% if site.show_excerpts %}
+  {% include home.html %}
+{% else %}
+  {% include archive.html title="Posts" %}
+{% endif %}
