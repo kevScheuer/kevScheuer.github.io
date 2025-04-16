@@ -5,8 +5,10 @@ plugins:
 
 
 title: "Byte Sized Blog"
-author: "Kevin Scheuer"
-description: "My personal blog about ... something"
+description: >
+  Welcome to my blog page! I am a graduate student studying nuclear/particle
+  physics, and you'll find here various tutorials, code snippets, and whatever else has
+  helped me along my way to a PhD. I hope you find something useful!
 permalink: /:title/
 lang: "en"
 excerpt_separator: "\n\n\n"
@@ -28,6 +30,7 @@ external:                  # shows a footer with social links - for available ic
   - {title: Mail, icon: envelope, url: "mailto:scheuer.ks@gmail.com"}
   - {title: Github, icon: github, url: "https://github.com/kevScheuer"}
   - {title: Subscribe, icon: rss, url: "/feed.xml"}
+  - {title: LinkedIn, icon: linkedin, url: "https://www.linkedin.com/in/kevin-scheuer/"}
 
 comments:
 #  disqus_shortname: ""    # see https://disqus.com/
