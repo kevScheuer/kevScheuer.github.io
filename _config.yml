@@ -7,8 +7,9 @@ plugins:
 title: "Byte Sized Blog"
 description: >
   Welcome to my blog page! I am a graduate student studying nuclear/particle
-  physics, and you'll find here various tutorials, code snippets, and whatever else has
-  helped me along my way to a PhD. I hope you find something useful!
+  physics, and here you'll find various tutorials, code snippets, and whatever else has
+  helped me along my way to a PhD, or I find useful. I hope you find something useful 
+  here too!
 permalink: /:title/
 lang: "en"
 excerpt_separator: "\n\n\n"
