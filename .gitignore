@@ -35,3 +35,9 @@
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+
+# VS Code $
+###########
+# No need to include the .vscode directory, specific to my machine
+.vscode/

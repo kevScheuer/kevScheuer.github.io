@@ -18,6 +18,7 @@ This guide is aimed at macOS users, see the [References](#references) section fo
 * A basic understanding of making documents in LaTeX.
 * A free [Zotero](https://www.zotero.org/) account, with the [desktop app and browser "connecter" extension](https://www.zotero.org/download/)
 * [VS Code](https://code.visualstudio.com/Download) downloaded.
+Even if you don't fully know how to use each of these components yet, I'll walk you through getting started with them.
 
 ## Getting a LaTeX Distribution
 VS Code will be our text editor where we do all of our work, but we need a distribution of LaTeX behind the curtain for VS Code to use. TeXLive is **strongly recommended** for working with the VS Code extension we'll set up later, and the easiest way to do this is with MacTex. You can [find the download link here](https://www.tug.org/mactex/mactex-download.html). Don't let the file size scare you, much of it is GUI applications that we won't be installing, as they'll functionally be replaced by our VS Code environment.
