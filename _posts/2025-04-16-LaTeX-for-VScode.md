@@ -15,22 +15,24 @@ What you just saw above was the ability to save an article off the web, and imme
 
 ### Pre-requisites
 This guide is aimed at macOS users, see the [References](#references) section for Windows help. Below is some other requirements:
-* A basic understanding of making documents in LaTeX.
+* A basic understanding of writing in LaTeX.
 * A free [Zotero](https://www.zotero.org/) account, with the [desktop app and browser "connecter" extension](https://www.zotero.org/download/)
 * [VS Code](https://code.visualstudio.com/Download) downloaded.
 Even if you don't fully know how to use each of these components yet, I'll walk you through getting started with them.
 
 ## Getting a LaTeX Distribution
-VS Code will be our text editor where we do all of our work, but we need a distribution of LaTeX behind the curtain for VS Code to use. TeXLive is **strongly recommended** for working with the VS Code extension we'll set up later, and the easiest way to do this is with MacTex. You can [find the download link here](https://www.tug.org/mactex/mactex-download.html). Don't let the file size scare you, much of it is GUI applications that we won't be installing, as they'll functionally be replaced by our VS Code environment.
+VS Code will be our text editor where we do all of our work, but we need a distribution of LaTeX behind the curtain for VS Code to use. TeXLive is **strongly recommended** for working with LaTeX-Workshop, the VS Code extension we'll set up later, and the easiest way to do this for macOS machines is with MacTex. You can [find the download link here](https://www.tug.org/mactex/mactex-download.html). This distribution will take almost 10 GB of space.
 
-1. TODO: Write step by step instructions when you open mactex
+* The size is mainly because TeXLive contains *tons* of packages and fonts. If you'd like a lighter weight distribution, [LaTeX-Workshop has some alternatives under the Requirements section](https://github.com/James-Yu/latex-workshop/wiki/Install).
+
+Once the MacTeX.pkg is downloaded, open it and follow the install instructions. **At the Installation Type step, select Customize and make sure only TeXLive-2025 is selected.** There is no issue installing the other GUI components, but they are functionally being replaced by VS Code so they are not needed.
 
 ## Setting up VS Code
 With our LaTeX ready, we now need to get VS Code to work with it. The power of VS Code's customization and tools comes from its Extensions Marketplace, which we'll demonstrate here. To access extensions, open the primary side bar (**View > Appearance > Primary Side Bar**), and click the extensions icon. 
 
 TODO: Annotated screenshot of each side bar element
 
-From there, enter `James-Yu.latex-workshop` in the search bar, select the result, and click **Install**.
+From there, enter `James-Yu.latex-workshop` in the search bar, select the result, and click **Install**. 
 
 
 
