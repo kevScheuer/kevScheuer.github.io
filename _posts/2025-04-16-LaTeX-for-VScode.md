@@ -1,6 +1,7 @@
 ---
 title: "Streamline Scientific Writing with VS Code + Zotero + Github"
 layout: post
+usemathjax: true
 ---
 
 *Check this out*
@@ -45,10 +46,16 @@ In order to best see the capabilities of git and zotero, we'll need LaTeX docume
   * If you haven't already, select **Initialize Repository** from the source control tab in the primary side bar to activate git tracking. This is the same as running `git init` in the terminal.
 * Otherwise, you can use [this sample project off of github](https://github.com/kevScheuer/latex-sample). Follow the instructions at the bottom of the linked page to download it and open it in VS Code.
 
-The LaTeX-Workshop extension includes a LaTeX tab in the Primary Side Bar. Select it, and you'll notice among other options the button to $\textcolor{green}{\triangleright} \textbf{Build LaTeX project}$. If you're most familiar with Overleaf, this is equivalent to the *Recompile* option.
+The LaTeX-Workshop extension includes a LaTeX tab in the Primary Side Bar. Select it, and you'll notice among other options the button to $\textcolor{green}{\triangleright}$ **Build LaTeX project**. $\Delta$ Test. If you're most familiar with Overleaf, this is equivalent to the *Recompile* option. If you want to mimic the Overleaf style view, you can use the *Split Editor Right* button and position your output pdf to the right, like below.
+
+![Screenshot of VS Code's split editor view with the main.tex file on the left, and the ouptut pdf on the right](/assets/images/2025-04-16-LaTeX-for-VScode/split-view.png)
+
+Now that we know our LaTeX build works, lets take a look at what git can do for us.
 
 ### Git Basics
 
+
+(Mention the rewarp extension here as a way to get nicer git diffs)
 
 ### Zotero in VS Code
 
