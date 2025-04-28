@@ -64,14 +64,38 @@ need to prepare Zotero first.
 
 ---
 ## Setting up Zotero
-Include better bibtex, explain using the browser extension to save to
-collections. 
+<div style="display: flex; align-items: flex-start; gap: 20px;">
+  <div style="flex: 1;">
+    As you saw in the intro, we want our setup to auto-export a newly saved 
+    citation to wherever our project is. We'll need Better BibTex to do this, 
+    and the <a 
+    href="https://retorque.re/zotero-better-bibtex/installation/index.html">
+    easy install instructions can be found here</a>. As mentioned, make sure 
+    you are installing this in the standalone Zotero application. If you're new 
+    to Zotero and haven't made a collection yet, open the app and click the 
+    <i>Add Collection</i> icon in the upper-left corner of the window.
+
+    Now in your browser when you find a cool new paper, <a 
+    href="https://arxiv.org/abs/2005.14272">like this one</a>, you can use the 
+    Zotero browser extension to easily save it to your collection.
+  </div>
+  <div style="flex: 1;">
+    <img src="/assets/images/2025-04-16-LaTeX-for-VScode/collections.png" 
+    alt="Screenshot showing the Add Collection icon placed above the My Library 
+    drop down menu" style="max-width: 70%; height: auto;">
+  </div>
+</div>
+
+![Screenshot of an arxiv page, with the Zotero browser extension GUI open in the
+upper right-hand corner](/assets/images/2025-04-16-LaTeX-for-VScode/arxiv.png)
+
+We'll show later how to auto-export your collection into a VS Code project.
 
 ## Working with a Sample Document
 In order to best see the capabilities of git and zotero, we'll need LaTeX
 document to test it out on. 
 * Do you already have a working LaTeX project in mind? On the *Welcome* editor
-  tab you can select *Open* and navigate to your project's home folder or select
+  tab you can select *Open* and navigate to your project's home folder, or select
   *Open Folder* from the Explorer sidebar.
   * If you haven't already, select **Initialize Repository** from the source
     control tab in the primary side bar to activate git tracking. This is the
@@ -91,8 +115,8 @@ button and position your output pdf to the right, like below.
 and the ouptut pdf on the
 right](/assets/images/2025-04-16-LaTeX-for-VScode/split-view.png)
 
-Now that we know our LaTeX build works, lets take a quick look at what git can do for
-us.
+Now that we know our LaTeX build works, lets take a quick look at what git can
+do for us.
 
 ### VS Code Git Basics
 If you've made any edits to your document, you may have noticed an
@@ -127,7 +151,6 @@ view and even revert to older versions of your project.
   2. Easier split view - I typically have the output pdf open in split view, and
   when editing on my small laptop screen it can get annoying having to scroll
   to see long lines of text.
-(Mention the rewarp extension here as a way to get nicer git diffs)
 * [Code Spell
   Checker](https://marketplace.visualstudio.com/items/?itemName=streetsidesoftware.code-spell-checker)
   (streetsidesoftware.code-spell-checker) works just as well for documents,
