@@ -4,7 +4,14 @@ layout: post
 usemathjax: true
 ---
 
-*Check this out* INCLUDE GIF HERE *Pretty neat, right?*
+*Check this out* 
+
+<video controls autoplay loop muted style="max-width: 100%; height: auto;">
+  <source src="/assets/videos/2025-04-16-LaTeX-for-VScode/clip.mp4" type="video/mp4">
+  <source src="/assets/videos/2025-04-16-LaTeX-for-VScode/clip.webm" type="video/webm">
+  Your browser does not support the video tag.
+</video>
+*Pretty neat, right?*
 
 What you just saw above was the ability to save an article off the web, and
 immediately cite it in your paper with fully integrated git providing version
@@ -51,16 +58,15 @@ needed.
 With our LaTeX ready, we now need to get VS Code to work with it. The power of
 VS Code's customization and tools comes from its Extensions Marketplace, which
 we'll demonstrate how to access now. Open the primary side bar (**View >
-Appearance > Primary Side Bar**), and click the extensions icon. 
+Appearance > Primary Side Bar**), and click the extensions icon. From there,
+enter `James-Yu.latex-workshop` in the search bar, select the result, and click
+**Install**. We'll put it to use later in this guide, but we need to prepare
+Zotero first.
 
 ![Screenshot of VS Code, with the left sidebar open to the extensions tab, and
 James-Yu.latex-workshop entered in the extensions search bar. The editor window
 has the LaTeX Workshop extension
 open](/assets/images/2025-04-16-LaTeX-for-VScode/LaTeX-extension.png)
-
-From there, enter `James-Yu.latex-workshop` in the search bar, select the
-result, and click **Install**. We'll put it to use later in this guide, but we
-need to prepare Zotero first.
 
 ---
 ## Setting up Zotero
@@ -89,8 +95,7 @@ need to prepare Zotero first.
 ![Screenshot of an arxiv page, with the Zotero browser extension GUI open in the
 upper right-hand corner](/assets/images/2025-04-16-LaTeX-for-VScode/arxiv.png)
 
-We'll show later how to auto-export your collection into a VS Code project.
-
+---
 ## Working with a Sample Document
 In order to best see the capabilities of git and zotero, we'll need LaTeX
 document to test it out on. 
@@ -133,9 +138,29 @@ status` view, where you can view changes and commit them, and push or pull
 commits from a remote repository. You can access old commits, allowing you to
 view and even revert to older versions of your project.
 
----
-### Zotero in VS Code
 
+### Zotero in VS Code
+We're in the home stretch now, only a few more steps to go. In Zotero, right
+click on a collection and select `Export Collection`. This opens a dialogue box,
+where you'll want to select `Better BibTeX` for the format, and make sure `Keep
+Updated` is checked. Save the file in your LaTeX project, or if you're using the
+sample project from earlier you can replace the `bibliography.bib` file there
+with it. Now whenever a paper is added to the collection in Zotero, it will sync
+with this file and the paper will be available to cite!
+* For more info on how the auto-export works, [details can be found
+  here](https://retorque.re/zotero-better-bibtex/exporting/auto/)
+
+Since better BibTeX will auto generate citation keys, they can make it a little clumsy to find your paper, but the [Zotero LaTeX
+extension](https://marketplace.visualstudio.com/items/?itemName=bnavetta.zoterolatex)
+(bnavetta.zoterolatex) can fix that. 
+* Note this extension uses `autocite` as its LaTeX citation command by default, which won't work with the `natbib` package (this is used in the example LaTeX project). You can change this to `cite`, or whatever command you need it to be, at `zotero.latexCommand` in VS Code's user settings.
+
+With the extension added, go to your LaTeX project in VS Code and press `Alt+z` to open a dialogue box that allows you to search for any papers in your library. Note: you need to have the Zotero app open while using this extension. 
+
+![Screenshot of VS Code with a Zotero search dialogue box open](/assets/images/2025-04-16-LaTeX-for-VScode/zotero_linker.png)
+
+### Congratulations!
+You are all done, and now have automated citation handling with built-in version control with git! Below I've listed some other tips that are not necessary, but you may find useful for this setup. If you have any comments / questions please feel free to reach out to me via email at <scheuer.ks@gmail.com>. Happy writing!
 
 ---
 ## Tips
@@ -155,20 +180,18 @@ view and even revert to older versions of your project.
   Checker](https://marketplace.visualstudio.com/items/?itemName=streetsidesoftware.code-spell-checker)
   (streetsidesoftware.code-spell-checker) works just as well for documents,
   flagging any typos you may have
-  * It has it flag typos as a `Problem` by default, which I find annoying. TODO:
-    finish saying how to edit this
+  * It will flag typos as a `Problem` by default, which I find annoying. You can
+    turn this off by changing `cSpell.diagnosticLevel` to *Hint*.
 
-### NAME THIS
-If your projects tend to build quickly, consider turning on the user setting
-(the one setting)
-
-Subfile magic command If you used the example github repo to test out the LaTeX
-environment, you might have noticed that the first line of the `experiment.tex`
-subfile was a "magic" command that specified the root TeX file. When you create
-a new subfile you can of course write this command yourself, but LaTeX workshop
-simply handles the pathing for you by using the command palette option **LaTeX
-Workshop: Insert !TeX root magic comment** and choosing your main file.
-
+### Settings & Tricks
+* If your projects tend to build pretty quickly, consider changing the
+ user setting `latex-workshop.latex.autoBuild.run` to build `onSave`.
+* If you used the sample LaTeX project, you may have noticed the use
+of subfiles and the `% !TeX root = ../../main.tex` magic command 
+placed at the top of the `experiment.tex` subfile, which instructs 
+what file is to be built. If you make new subfiles, they can be easily 
+inserted from the command palette using 
+`LaTeX Workshop: Insert !TeX root magic comment`.
 
 
 ### References
