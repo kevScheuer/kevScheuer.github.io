@@ -6,7 +6,7 @@ usemathjax: true
 
 *Check this out* 
 
-<video controls autoplay loop muted style="max-width: 100%; height: auto;">
+<video controls autoplay loop muted style="max-width: 100%; height: auto;">'
   <source src="/assets/videos/2025-04-16-LaTeX-for-VScode/clip.mp4" type="video/mp4">
   <source src="/assets/videos/2025-04-16-LaTeX-for-VScode/clip.webm" type="video/webm">
   Your browser does not support the video tag.
@@ -14,34 +14,35 @@ usemathjax: true
 *Pretty neat, right?*
 
 What you just saw above was the ability to save an article off the web, and
-immediately cite it in your paper with fully integrated git providing version
-history + backups. This guide will show you how to configure Visual Studio Code
-(VS Code) and Zotero together to work together automatically, and if you're
-hesitant to take the leap from Overleaf, consider the following:
+immediately cite it in your paper. This guide will show you how to configure
+Visual Studio Code (VS Code), git, and Zotero together to work together
+automatically to make your writing process a breeze. Most likely, the big
+question on your mind is "Why should I switch from Overleaf?", so consider
+the following:
 * You'll be able to edit / compile your work entirely locally
 * Git integration means neat collaboration + version history (something overleaf
-  *tries* to do and locks most of behind a paywall)
+  *tries* to do, but locks most of it behind a paywall)
 * No more compilation timeouts
 * A fully customizable environment
 
+If any of this sounds interesting to you, then read on!
+
 ### Pre-requisites
-This guide is aimed at macOS users, see the [References](#references) section
-for Windows help. Below is some other requirements:
+This guide is aimed at macOS users, but the [References](#references) section
+includes some resources for Windows users. Some other requirements include:
 1. A basic understanding of writing in LaTeX.
 2. A free [Zotero](https://www.zotero.org/) account, with the [desktop app and
    browser "connecter" extension](https://www.zotero.org/download/)
-3. [VS Code](https://code.visualstudio.com/Download) downloaded. Even if you
-don't fully know how to use each of these components yet, I'll walk you through
-getting started with them.
+3. [VS Code](https://code.visualstudio.com/Download) downloaded. 
 
 ---
 ## Getting a LaTeX Distribution
 All the work will be done on VS Code, but we need a distribution of LaTeX behind
 the curtain for VS Code to use. **TeXLive is strongly recommended** for working
-with LaTeX-Workshop, a VS Code extension we'll set up later, and the easiest
+with `LaTeX-Workshop`, a VS Code extension we'll set up later, and the easiest
 way to do this for macOS machines is with MacTex. You can [find the download
-link here](https://www.tug.org/mactex/mactex-download.html). This distribution
-will take almost 10 GB of space.
+link here](https://www.tug.org/mactex/mactex-download.html), but note this 
+distribution will take almost 10 GB of space.
 
 * The size is mainly because TeXLive contains many packages and fonts. If
   you'd like a lighter weight distribution, [LaTeX-Workshop has some
@@ -49,14 +50,14 @@ will take almost 10 GB of space.
   section](https://github.com/James-Yu/latex-workshop/wiki/Install).
 
 Once the MacTeX.pkg is downloaded, open it and follow the install instructions.
-**At the *Installation Type* step, select *Customize* and make sure only
-TeXLive-2025 is selected.** There is no issue installing the other GUI
-components, but they are functionally being replaced by VS Code so they are not
+**At the `Installation Type` step, select `Customize` and make sure only
+`TeXLive-2025` is selected.** There is no issue installing the other GUI
+components, but we will functionally replace them with VS Code, so they aren't
 needed.
 
 ## LaTeX on VS Code
 With our LaTeX ready, we now need to get VS Code to work with it. The power of
-VS Code's customization and tools comes from its Extensions Marketplace, which
+VS Code's customization and tools come from its Extensions Marketplace, which
 we'll demonstrate how to access now. Open the primary side bar (**View >
 Appearance > Primary Side Bar**), and click the extensions icon. From there,
 enter `James-Yu.latex-workshop` in the search bar, select the result, and click
@@ -70,8 +71,8 @@ open](/assets/images/2025-04-16-LaTeX-for-VScode/LaTeX-extension.png)
 
 ---
 ## Setting up Zotero
-<div style="display: flex; align-items: flex-start; gap: 20px;">
-  <div style="flex: 1;">
+<div style="display: flex; align-items: flex-start; gap: 40px;">
+  <div style="flex: 1.5;">
     As you saw in the intro, we want our setup to auto-export a newly saved 
     citation to wherever our project is. We'll need Better BibTex to do this, 
     and the <a 
@@ -88,7 +89,7 @@ open](/assets/images/2025-04-16-LaTeX-for-VScode/LaTeX-extension.png)
   <div style="flex: 1;">
     <img src="/assets/images/2025-04-16-LaTeX-for-VScode/collections.png" 
     alt="Screenshot showing the Add Collection icon placed above the My Library 
-    drop down menu" style="max-width: 70%; height: auto;">
+    drop-down menu" style="max-width: 50%; height: auto;">
   </div>
 </div>
 
@@ -97,12 +98,12 @@ upper right-hand corner](/assets/images/2025-04-16-LaTeX-for-VScode/arxiv.png)
 
 ---
 ## Working with a Sample Document
-In order to best see the capabilities of git and zotero, we'll need LaTeX
+To best see the capabilities of git and Zotero, we'll need a LaTeX
 document to test it out on. 
 * Do you already have a working LaTeX project in mind? On the *Welcome* editor
-  tab you can select *Open* and navigate to your project's home folder, or select
-  *Open Folder* from the Explorer sidebar.
-  * If you haven't already, select **Initialize Repository** from the source
+  tab you can select `Open` and navigate to your project's home folder, or select
+  `Open Folder` from the Explorer tab on the sidebar.
+  * If you haven't already, select `Initialize Repository` from the source
     control tab in the primary side bar to activate git tracking. This is the
     same as running `git init` in the terminal.
 * Otherwise, you can use [this sample project off of
@@ -117,10 +118,10 @@ want to mimic the Overleaf style view, you can use the *Split Editor Right*
 button and position your output pdf to the right, like below.
 
 ![Screenshot of VS Code's split editor view with the main.tex file on the left,
-and the ouptut pdf on the
+and the output pdf on the
 right](/assets/images/2025-04-16-LaTeX-for-VScode/split-view.png)
 
-Now that we know our LaTeX build works, lets take a quick look at what git can
+Now that we know our LaTeX build works, let's take a quick look at what git can
 do for us.
 
 ### VS Code Git Basics
@@ -140,8 +141,8 @@ view and even revert to older versions of your project.
 
 
 ### Zotero in VS Code
-We're in the home stretch now, only a few more steps to go. In Zotero, right
-click on a collection and select `Export Collection`. This opens a dialogue box,
+We're in the home stretch now, only a few more steps to go. In Zotero, right-click 
+on a collection and select `Export Collection`. This opens a dialogue box,
 where you'll want to select `Better BibTeX` for the format, and make sure `Keep
 Updated` is checked. Save the file in your LaTeX project, or if you're using the
 sample project from earlier you can replace the `bibliography.bib` file there
@@ -150,7 +151,7 @@ with this file and the paper will be available to cite!
 * For more info on how the auto-export works, [details can be found
   here](https://retorque.re/zotero-better-bibtex/exporting/auto/)
 
-Since better BibTeX will auto generate citation keys, they can make it a little clumsy to find your paper, but the [Zotero LaTeX
+Since better BibTeX will auto-generate citation keys, they can make it a little clumsy to find your paper, but the [Zotero LaTeX
 extension](https://marketplace.visualstudio.com/items/?itemName=bnavetta.zoterolatex)
 (bnavetta.zoterolatex) can fix that. 
 * Note this extension uses `autocite` as its LaTeX citation command by default, which won't work with the `natbib` package (this is used in the example LaTeX project). You can change this to `cite`, or whatever command you need it to be, at `zotero.latexCommand` in VS Code's user settings.
@@ -194,4 +195,5 @@ inserted from the command palette using
 `LaTeX Workshop: Insert !TeX root magic comment`.
 
 
-### References
+## References
+* [This reddit thread gave me the original idea, and contains some instructions for Windows support](https://www.reddit.com/r/LaTeX/comments/10hrwd7/using_latex_with_vs_code_zotero_and_github/)
