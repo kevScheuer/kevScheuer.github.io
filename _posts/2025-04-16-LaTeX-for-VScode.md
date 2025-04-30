@@ -42,9 +42,9 @@ includes some resources for Windows users. Some other requirements include:
 ---
 ## Table of Contents :mag_right:
 - [Table of Contents :mag\_right:](#table-of-contents-mag_right)
-- [Getting a LaTeX Distribution](#getting-a-latex-distribution)
-- [LaTeX and Git on VS Code](#latex-and-git-on-vs-code)
-- [Setting up Zotero](#setting-up-zotero)
+- [Getting a LaTeX Distribution :file\_folder:](#getting-a-latex-distribution-file_folder)
+- [LaTeX and Git on VS Code :gear:](#latex-and-git-on-vs-code-gear)
+- [Setting up Zotero :books:](#setting-up-zotero-books)
 - [Working with a Sample Document :page\_with\_curl:](#working-with-a-sample-document-page_with_curl)
   - [VS Code Git Basics](#vs-code-git-basics)
   - [Zotero in VS Code](#zotero-in-vs-code)
@@ -55,7 +55,7 @@ includes some resources for Windows users. Some other requirements include:
 - [References](#references)
 
 ---
-## Getting a LaTeX Distribution
+## Getting a LaTeX Distribution :file_folder:
 All the work will be done on VS Code, but we need a distribution of LaTeX behind
 the curtain for VS Code to use. **TeXLive is strongly recommended** for working
 with `LaTeX-Workshop`, a VS Code extension we'll set up later, and the easiest
@@ -75,7 +75,7 @@ components, but we will functionally replace them with VS Code, so they aren't
 needed.
 
 ---
-## LaTeX and Git on VS Code
+## LaTeX and Git on VS Code :gear:
 With our LaTeX ready, we need to get VS Code to work with it. The power of
 VS Code's customization and tools come from its Extensions Marketplace, which
 we'll demonstrate how to access now. 
@@ -97,7 +97,7 @@ While we're here, install these other extensions to boost our git capabilities:
 3. [GitLens](https://marketplace.visualstudio.com/items/?itemName=eamodio.gitlens) (eamodio.gitlens)
 
 ---
-## Setting up Zotero
+## Setting up Zotero :books:
 <div style="display: flex; align-items: flex-start; gap: 40px;">
   <div style="flex: 1.5;">
     As you saw in the intro, we want our setup to auto-export a newly saved 
