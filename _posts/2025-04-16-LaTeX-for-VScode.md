@@ -2,7 +2,7 @@
 title: "Streamline Scientific Writing with VS Code + Zotero + Github"
 layout: post
 usemathjax: true
-description: "Learn how to streamline your scientific writing workflow using VS Code, Zotero, and GitHub. This guide covers setup, tips, and tricks for macOS users."
+description: "Learn how to setup an automated environment to make writing a breeze."
 keywords: "LaTeX, VS Code, Zotero, GitHub, scientific writing, macOS, Better BibTeX, LaTeX with VS Code, automated citations, Zotero VS Code integration"
 author: "Kevin Scheuer"
 image: "/assets/images/2025-04-16-LaTeX-for-VScode/wide-preview.png"
