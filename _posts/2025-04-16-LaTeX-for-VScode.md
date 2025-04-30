@@ -5,7 +5,8 @@ usemathjax: true
 description: "Learn how to streamline your scientific writing workflow using VS Code, Zotero, and GitHub. This guide covers setup, tips, and tricks for macOS users."
 keywords: "LaTeX, VS Code, Zotero, GitHub, scientific writing, macOS, Better BibTeX, LaTeX with VS Code, automated citations, Zotero VS Code integration"
 author: "Kevin Scheuer"
-image: "/assets/images/2025-04-16-LaTeX-for-VScode/preview.jpeg"
+image: "/assets/images/2025-04-16-LaTeX-for-VScode/wide-preview.png"
+square_image: "assets/images/2025-04-16-LaTeX-for-VScode/square-preview.jpeg"
 ---
 
 *Check this out* 
