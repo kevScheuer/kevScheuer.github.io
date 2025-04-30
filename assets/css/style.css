@@ -1,0 +1,6 @@
+/* Ensure emojis are properly aligned in all content */
+.emoji {
+    vertical-align: middle;
+    font-size: inherit; /* Match the emoji size to the text */
+    line-height: inherit;
+}

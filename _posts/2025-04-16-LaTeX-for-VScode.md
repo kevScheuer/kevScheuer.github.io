@@ -23,11 +23,11 @@ immediately cite it in your paper. This guide will show you how to configure
 Visual Studio Code (VS Code), git, and Zotero together to automate your workflow
 and make writing a breeze. Most likely, the big question on your mind is "Why
 should I switch from Overleaf?", so consider the following:
-* Work entirely offline
-* Git integration means neat collaboration + version history (something overleaf
+* :airplane: Work entirely offline
+* :link: Git integration means neat collaboration + version history (something overleaf
   *tries* to do, but locks most of it behind a paywall)
-* No more compilation timeouts
-* A fully customizable environment
+* :hourglass: No more compilation timeouts
+* :hammer_and_wrench: A fully customizable environment  
 
 If any of this sounds interesting to you, then read on!
 
@@ -40,16 +40,16 @@ includes some resources for Windows users. Some other requirements include:
 3. [VS Code](https://code.visualstudio.com/Download) downloaded.
     
 ---
-## Table of Contents
-- [Table of Contents](#table-of-contents)
+## Table of Contents :mag_right:
+- [Table of Contents :mag\_right:](#table-of-contents-mag_right)
 - [Getting a LaTeX Distribution](#getting-a-latex-distribution)
 - [LaTeX and Git on VS Code](#latex-and-git-on-vs-code)
 - [Setting up Zotero](#setting-up-zotero)
-- [Working with a Sample Document](#working-with-a-sample-document)
+- [Working with a Sample Document :page\_with\_curl:](#working-with-a-sample-document-page_with_curl)
   - [VS Code Git Basics](#vs-code-git-basics)
   - [Zotero in VS Code](#zotero-in-vs-code)
-  - [Congratulations!](#congratulations)
-- [Tips](#tips)
+  - [Congratulations! :tada:](#congratulations-tada)
+- [Tips :bulb:](#tips-bulb)
   - [Useful VS Code Extensions:](#useful-vs-code-extensions)
   - [Settings \& Tricks](#settings--tricks)
 - [References](#references)
@@ -69,20 +69,20 @@ distribution will take almost 10 GB of space.
   section](https://github.com/James-Yu/latex-workshop/wiki/Install).
 
 Once the MacTeX.pkg is downloaded, open it and follow the install instructions.
-**At the `Installation Type` step, select `Customize` and make sure only
-`TeXLive-2025` is selected.** There is no issue installing the other GUI
+At the `Installation Type` step, select `Customize` and make sure only
+`TeXLive-2025` is selected. There is no issue installing the other GUI
 components, but we will functionally replace them with VS Code, so they aren't
 needed.
 
 ---
 ## LaTeX and Git on VS Code
-With our LaTeX ready, we now need to get VS Code to work with it. The power of
+With our LaTeX ready, we need to get VS Code to work with it. The power of
 VS Code's customization and tools come from its Extensions Marketplace, which
 we'll demonstrate how to access now. 
 1. Open the primary side bar (**View > Appearance > Primary Side Bar**), and
    click the extensions icon. 
 2. From there, enter `James-Yu.latex-workshop` in the search bar, select the
-result, and click **Install**. 
+result, and click `Install`. 
    - We'll put it to use later in this guide, but we need to prepare Zotero
      first.
 
@@ -101,10 +101,9 @@ While we're here, install these other extensions to boost our git capabilities:
 <div style="display: flex; align-items: flex-start; gap: 40px;">
   <div style="flex: 1.5;">
     As you saw in the intro, we want our setup to auto-export a newly saved 
-    citation to wherever our project is. We'll need Better BibTex to do this, 
-    and the <a 
+    citation to wherever our project is. To do this we'll need Better BibTeX, <a 
     href="https://retorque.re/zotero-better-bibtex/installation/index.html">
-    easy install instructions can be found here</a>. As mentioned, make sure 
+    which has easy install instructions here</a>. As mentioned, make sure 
     you are installing this in the standalone Zotero application. If you're new 
     to Zotero and haven't made a collection yet, open the app and click the 
     <i>Add Collection</i> icon in the upper-left corner of the window.
@@ -124,7 +123,7 @@ While we're here, install these other extensions to boost our git capabilities:
 upper right-hand corner](/assets/images/2025-04-16-LaTeX-for-VScode/arxiv.png)
 
 ---
-## Working with a Sample Document
+## Working with a Sample Document :page_with_curl:
 To best see the capabilities of git and Zotero, we'll need a LaTeX
 document to test it out on.
 * Do you already have a working LaTeX project in mind? On the *Welcome* editor
@@ -137,14 +136,17 @@ document to test it out on.
   github](https://github.com/kevScheuer/latex-sample). Follow the instructions
   at the bottom of the linked page to download it and open it in VS Code.
   * Note that it will automatically suggest the extensions listed in this
-    tutorial and have a `settings.json` with the settings I'll suggest later.
+    tutorial and have a project-specific `settings.json` with the settings I'll
+    suggest later.
 
 The LaTeX-Workshop extension includes a LaTeX tab in the Primary Side Bar.
 Select it, and you'll notice among other options the button to
-$\textcolor{green}{\triangleright}$ **Build LaTeX project**. If you're most
-familiar with Overleaf, this is equivalent to the *Recompile* option. If you
-want to mimic the Overleaf style view, use the *Split Editor Right* button and
-position your output pdf to the right, like below.
+$\textcolor{green}{\triangleright}$ **Build LaTeX project**. Whenever you make 
+changes to your project, click this to enact those changes and create the 
+`main.pdf` output file. If you're most familiar with Overleaf, this is equivalent
+to the *Recompile* option. If you want to mimic the Overleaf style view, use the
+*Split Editor Right* button and position your output pdf to the right, like
+below.
 
 ![Screenshot of VS Code's split editor view with the main.tex file on the left,
 and the output pdf on the
@@ -166,7 +168,9 @@ If you navigate to the *Source Control* tab in the primary side bar, you'll see
 that file is now listed under *Changes*. This tab is essentially your `git
 status` view, where you can view changes and commit them, and push or pull
 commits from a remote repository. You can access old commits, allowing you to
-view and even revert to older versions of your project.
+view and even revert to older versions of your project. If you're entirely new
+to git, [VS Code has a guide going over the
+basics](https://code.visualstudio.com/docs/sourcecontrol/intro-to-git).
 
 
 ### Zotero in VS Code
@@ -178,33 +182,32 @@ We're in the home stretch now, only a few more steps to go.
    from earlier you can replace the `bibliography.bib` file there with it. 
    
 Now whenever a paper is added to the collection in Zotero, it will sync with
-this file and the paper will be available to cite!
-* For more info on how the auto-export works, [details can be found
-  here](https://retorque.re/zotero-better-bibtex/exporting/auto/)
-
-Since better BibTeX will auto-generate citation keys, they can make it a little
-clumsy to find your paper, but the [Zotero LaTeX
+this file and the paper will be available to cite! For more info on how the
+auto-export works, [details can be found
+here](https://retorque.re/zotero-better-bibtex/exporting/auto/). Since better
+BibTeX will auto-generate citation keys, they can make it a little clumsy to
+find your paper, but the [Zotero LaTeX
 extension](https://marketplace.visualstudio.com/items/?itemName=bnavetta.zoterolatex)
 (bnavetta.zoterolatex) can fix that. 
-* Note this extension uses `autocite` as its LaTeX citation command by default,
-  which won't work with the `natbib` package (this is used in the example LaTeX
-  project). You can change this to `cite`, or whatever command you need it to
-  be, at `zotero.latexCommand` in VS Code's user settings.
+* `autocite` is the default citation command, which isn't compatible with
+  `natbib`. In VS Code's user settings, change `zotero.latexCommand` to `cite`
+  (or whatever citation command you need).
 
-With the extension added, go to your LaTeX project in VS Code and press `Alt+z`
-to open a dialog box that allows you to search for any papers in your library.
-Note: you need to have the Zotero app open while using this extension. 
+With the extension added and the Zotero app open in the background, go to your
+LaTeX project in VS Code and press `Alt+z` to open a dialog box that allows you
+to search for any papers in your library.
 
 ![Screenshot of VS Code with a Zotero search dialog box open](/assets/images/2025-04-16-LaTeX-for-VScode/zotero_linker.png)
 
-### Congratulations!
-You are all done, and now have automated citation handling with built-in version
-control with git! Below I've listed some other tips that are not necessary, but
-you may find useful for this setup. If you have any comments / questions please
-feel free to reach out to me via email at <scheuer.ks@gmail.com>. Happy writing!
+### Congratulations! :tada:
+You are all done, and now have LaTeX capabilities with automated citation
+handling and built-in version control with git, all in VS Code! Below I've
+listed some other tips that are not necessary, but you may find useful for this
+setup. If you have any comments / questions please feel free to reach out to me
+via email at <scheuer.ks@gmail.com>. Happy writing!
 
 ---
-## Tips
+## Tips :bulb:
 ### Useful VS Code Extensions:
 * The [Rewrap
   extension](https://marketplace.visualstudio.com/items/?itemName=dnut.rewrap-revived)
