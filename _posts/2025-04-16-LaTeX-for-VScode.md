@@ -6,7 +6,7 @@ description: "Learn how to setup an automated environment to make writing a bree
 keywords: "LaTeX, VS Code, Zotero, GitHub, scientific writing, macOS, Better BibTeX, LaTeX with VS Code, automated citations, Zotero VS Code integration"
 author: "Kevin Scheuer"
 image: "/assets/images/2025-04-16-LaTeX-for-VScode/wide-preview.png"
-square_image: "assets/images/2025-04-16-LaTeX-for-VScode/square-preview.jpeg"
+square_image: "/assets/images/2025-04-16-LaTeX-for-VScode/square-preview.jpeg"
 ---
 
 *Check this out* 

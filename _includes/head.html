@@ -14,10 +14,10 @@
       src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
 </script>
 
-<!-- Open Graph Meta Tags -->
+<!-- Open Graph Meta Tags (for platforms like LinkedIn, Facebook) -->
 <meta property="og:title" content="{{ page.title }}" />
 <meta property="og:description" content="{{ page.description }}" />
-<meta property="og:image" content="{% if page.square_image %}{{ site.url }}{{ page.square_image }}{% else %}{{ site.url }}{{ page.image }}{% endif %}" />
+<meta property="og:image" content="{{ site.url }}{{ page.image }}" />
 <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
 <meta property="og:type" content="article" />
 
