@@ -20,7 +20,7 @@ square_image: "/assets/images/2025-04-16-LaTeX-for-VScode/square-preview.jpeg"
 
 What you just saw above was the ability to save an article off the web, and
 immediately cite it in your paper. This guide will show you how to configure
-Visual Studio Code (VS Code), git, and Zotero together to automate your workflow
+Visual Studio Code (VS Code), Git, and Zotero together to automate your workflow
 and make writing a breeze. Most likely, the big question on your mind is "Why
 should I switch from Overleaf?", so consider the following:
 * :airplane: Work entirely offline
@@ -91,7 +91,7 @@ James-Yu.latex-workshop entered in the extensions search bar. The editor window
 has the LaTeX Workshop extension
 open](/assets/images/2025-04-16-LaTeX-for-VScode/LaTeX-extension.png)
 
-While we're here, install these other extensions to boost our git capabilities:
+While we're here, install these other extensions to boost our Git capabilities:
 1. [Github Repositories](https://marketplace.visualstudio.com/items/?itemName=GitHub.remotehub) (GitHub.remotehub)
 2. [Github Pull Requests](https://marketplace.visualstudio.com/items/?itemName=GitHub.vscode-pull-request-github) (GitHub.vscode-pull-request-github)
 3. [GitLens](https://marketplace.visualstudio.com/items/?itemName=eamodio.gitlens) (eamodio.gitlens)
@@ -124,13 +124,13 @@ upper right-hand corner](/assets/images/2025-04-16-LaTeX-for-VScode/arxiv.png)
 
 ---
 ## Working with a Sample Document :page_with_curl:
-To best see the capabilities of git and Zotero, we'll need a LaTeX
+To best see the capabilities of Git and Zotero, we'll need a LaTeX
 document to test it out on.
 * Do you already have a working LaTeX project in mind? On the *Welcome* editor
   tab you can select `Open` and navigate to your project's home folder, or select
   `Open Folder` from the Explorer tab on the sidebar.
   * If you haven't already, select `Initialize Repository` from the source
-    control tab in the primary side bar to activate git tracking. This is the
+    control tab in the primary side bar to activate Git tracking. This is the
     same as running `git init` in the terminal.
 * Otherwise, you can use [this sample project off of
   github](https://github.com/kevScheuer/latex-sample). Follow the instructions
@@ -152,7 +152,7 @@ below.
 and the output pdf on the
 right](/assets/images/2025-04-16-LaTeX-for-VScode/split-view.png)
 
-Now that we know our LaTeX build works, let's take a quick look at what git can
+Now that we know our LaTeX build works, let's take a quick look at what Git can
 do for us.
 
 ### VS Code Git Basics
@@ -169,7 +169,7 @@ that file is now listed under *Changes*. This tab is essentially your `git
 status` view, where you can view changes and commit them, and push or pull
 commits from a remote repository. You can access old commits, allowing you to
 view and even revert to older versions of your project. If you're entirely new
-to git, [VS Code has a guide going over the
+to Git, [VS Code has a guide going over the
 basics](https://code.visualstudio.com/docs/sourcecontrol/intro-to-git).
 
 
@@ -201,7 +201,7 @@ to search for any papers in your library.
 
 ### Congratulations! :tada:
 You are all done, and now have LaTeX capabilities with automated citation
-handling and built-in version control with git, all in VS Code! Below I've
+handling and built-in version control with Git, all in VS Code! Below I've
 listed some other tips that are not necessary, but you may find useful for this
 setup. If you have any comments / questions please feel free to reach out to me
 via email at <scheuer.ks@gmail.com>. Happy writing!
@@ -213,8 +213,8 @@ via email at <scheuer.ks@gmail.com>. Happy writing!
   extension](https://marketplace.visualstudio.com/items/?itemName=dnut.rewrap-revived)
   (dnut.rewrap-revived) wraps text according to the VS Code ruler
   `editor.rulers` in the settings. This has two benefits:
-  1. Better git differences - Git will check for changes line-by-line, so if an
-     entire paragraph is on one line then any changes to it means git will flag
+  1. Better Git differences - Git will check for changes line-by-line, so if an
+     entire paragraph is on one line then any changes to it means Git will flag
      the entire paragraph as being changed. Rewrap will put everything on a new
      line (this doesn't affect the output).
   2. Easier split view - I typically have the output pdf open in split view, and
