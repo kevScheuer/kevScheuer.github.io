@@ -1,9 +1,9 @@
 ---
-title: "Streamline Scientific Writing with VS Code + Zotero + Git"
+title: "Streamline Academic Writing with VS Code + Zotero + Git"
 layout: post
 usemathjax: true
 description: "Automated citations, version history, and full LaTeX capabilities all within a VS Code environment!"
-keywords: "LaTeX, VS Code, Zotero, Git, GitHub, scientific writing, macOS, Better BibTeX, LaTeX with VS Code, automated citations, Zotero VS Code integration"
+keywords: "LaTeX, VS Code, Zotero, Git, GitHub, academic writing, macOS, Better BibTeX, LaTeX with VS Code, automated citations, Zotero VS Code integration"
 author: "Kevin Scheuer"
 image: "/assets/images/2025-04-16-LaTeX-for-VScode/wide-preview.png"
 square_image: "/assets/images/2025-04-16-LaTeX-for-VScode/square-preview.jpeg"
